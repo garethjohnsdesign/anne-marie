@@ -1,0 +1,33 @@
+// Icons
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+/* =======================================================================================
+Example showing how to change the color/size of the icons:
+.icon-name {
+	font-size: 32px; // works because "width" & "height" were set using em units
+	color: red; // works for single-colored icons, because "fill" was set to "currentColor"
+}
+======================================================================================== */
+
+.icon-logo {
+	font-size: 32rem; // works because "width" & "height" were set using em units
+	color: rgba(0,0,0,0.8); // works for single-colored icons, because "fill" was set to "currentColor"
+  // Only affects medium screens and smaller
+  @include breakpoint(medium down) { 
+	font-size: 20rem;
+  }
+  
+  @include breakpoint(small only) { 
+	font-size: 15rem;
+  }
+}
+
+.icon-logo:hover {
+	color: rgba(0,0,0,0.7); // works for single-colored icons, because "fill" was set to "currentColor"
+}
